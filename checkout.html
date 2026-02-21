@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Prestige Leather</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">PRESTIGE</span>
+                <span class="brand-sub">LEATHER</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="products.html">All Products</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=racing">Racing Suits</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=sport">Sport Suits</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=touring">Touring Suits</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="cart.html" class="nav-icon cart-icon">
+                        <i class="bi bi-bag"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">CHECKOUT</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="cart.html">Cart</a></li>
+                    <li class="breadcrumb-item active">Checkout</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section py-5">
+        <div class="container">
+            <!-- Progress Steps -->
+            <div class="checkout-progress mb-5">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <span>Shipping</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-number">2</div>
+                    <span>Payment</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-number">3</div>
+                    <span>Confirm</span>
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <!-- Checkout Form -->
+                <div class="col-lg-8">
+                    <form id="checkoutForm">
+                        <!-- Step 1: Shipping -->
+                        <div class="checkout-step active" id="step1">
+                            <div class="checkout-card">
+                                <h4 class="card-title">
+                                    <i class="bi bi-geo-alt me-2"></i>Shipping Information
+                                </h4>
+                                
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">First Name *</label>
+                                        <input type="text" class="form-control" name="firstName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Last Name *</label>
+                                        <input type="text" class="form-control" name="lastName" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" name="email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Phone Number *</label>
+                                        <input type="tel" class="form-control" name="phone" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Address Line 1 *</label>
+                                        <input type="text" class="form-control" name="address1" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Address Line 2</label>
+                                        <input type="text" class="form-control" name="address2">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">City *</label>
+                                        <input type="text" class="form-control" name="city" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">State/Province *</label>
+                                        <input type="text" class="form-control" name="state" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">ZIP/Postal Code *</label>
+                                        <input type="text" class="form-control" name="zip" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Country *</label>
+                                        <select class="form-select" name="country" required>
+                                            <option value="">Select Country</option>
+                                            <option value="US">United States</option>
+                                            <option value="CA">Canada</option>
+                                            <option value="UK">United Kingdom</option>
+                                            <option value="DE">Germany</option>
+                                            <option value="FR">France</option>
+                                            <option value="IT">Italy</option>
+                                            <option value="ES">Spain</option>
+                                            <option value="AU">Australia</option>
+                                            <option value="JP">Japan</option>
+                                            <option value="PK">Pakistan</option>
+                                            <option value="AE">United Arab Emirates</option>
+                                            <option value="OTHER">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Shipping Method -->
+                                <h5 class="mt-4 mb-3">Shipping Method</h5>
+                                <div class="shipping-options">
+                                    <label class="shipping-option">
+                                        <input type="radio" name="shippingMethod" value="standard" checked>
+                                        <div class="option-content">
+                                            <div class="option-info">
+                                                <span class="option-name">Standard Shipping</span>
+                                                <span class="option-time">5-7 Business Days</span>
+                                            </div>
+                                            <span class="option-price">FREE</span>
+                                        </div>
+                                    </label>
+                                    <label class="shipping-option">
+                                        <input type="radio" name="shippingMethod" value="express">
+                                        <div class="option-content">
+                                            <div class="option-info">
+                                                <span class="option-name">Express Shipping</span>
+                                                <span class="option-time">2-3 Business Days</span>
+                                            </div>
+                                            <span class="option-price">$29.99</span>
+                                        </div>
+                                    </label>
+                                    <label class="shipping-option">
+                                        <input type="radio" name="shippingMethod" value="overnight">
+                                        <div class="option-content">
+                                            <div class="option-info">
+                                                <span class="option-name">Overnight Shipping</span>
+                                                <span class="option-time">1 Business Day</span>
+                                            </div>
+                                            <span class="option-price">$49.99</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="checkout-actions">
+                                <a href="cart.html" class="btn btn-outline-dark">
+                                    <i class="bi bi-arrow-left me-2"></i>Back to Cart
+                                </a>
+                                <button type="button" class="btn btn-maroon btn-next" data-next="2">
+                                    Continue to Payment<i class="bi bi-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Payment -->
+                        <div class="checkout-step" id="step2">
+                            <div class="checkout-card">
+                                <h4 class="card-title">
+                                    <i class="bi bi-credit-card me-2"></i>Payment Method
+                                </h4>
+
+                                <!-- Payment Options -->
+                                <div class="payment-options mb-4">
+                                    <label class="payment-option active">
+                                        <input type="radio" name="paymentMethod" value="card" checked>
+                                        <div class="option-content">
+                                            <i class="bi bi-credit-card-2-front"></i>
+                                            <span>Credit/Debit Card</span>
+                                        </div>
+                                    </label>
+                                    <label class="payment-option">
+                                        <input type="radio" name="paymentMethod" value="paypal">
+                                        <div class="option-content">
+                                            <i class="bi bi-paypal"></i>
+                                            <span>PayPal</span>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <!-- Card Details -->
+                                <div id="cardDetails">
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <label class="form-label">Card Number *</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                                                <span class="input-group-text">
+                                                    <i class="bi bi-credit-card-2-front"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Name on Card *</label>
+                                            <input type="text" class="form-control" name="cardName" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Expiry Date *</label>
+                                            <input type="text" class="form-control" name="cardExpiry" placeholder="MM/YY" maxlength="5" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">CVV *</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" name="cardCvv" placeholder="123" maxlength="4" required>
+                                                <span class="input-group-text">
+                                                    <i class="bi bi-question-circle" data-bs-toggle="tooltip" title="3 or 4 digit security code on your card"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- PayPal Info -->
+                                <div id="paypalDetails" class="d-none">
+                                    <div class="alert alert-info">
+                                        <i class="bi bi-info-circle me-2"></i>
+                                        You will be redirected to PayPal to complete your payment securely.
+                                    </div>
+                                </div>
+
+                                <!-- Billing Address -->
+                                <div class="form-check mt-4">
+                                    <input class="form-check-input" type="checkbox" id="sameBilling" checked>
+                                    <label class="form-check-label" for="sameBilling">
+                                        Billing address same as shipping address
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="checkout-actions">
+                                <button type="button" class="btn btn-outline-dark btn-prev" data-prev="1">
+                                    <i class="bi bi-arrow-left me-2"></i>Back
+                                </button>
+                                <button type="button" class="btn btn-maroon btn-next" data-next="3">
+                                    Review Order<i class="bi bi-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Confirm -->
+                        <div class="checkout-step" id="step3">
+                            <div class="checkout-card">
+                                <h4 class="card-title">
+                                    <i class="bi bi-check2-circle me-2"></i>Review Your Order
+                                </h4>
+
+                                <!-- Order Items -->
+                                <div class="order-items" id="orderItems">
+                                    <!-- Items loaded dynamically -->
+                                </div>
+
+                                <!-- Shipping Summary -->
+                                <div class="order-summary-section mt-4">
+                                    <h5>Shipping Address</h5>
+                                    <div class="summary-address" id="shippingSummary">
+                                        <!-- Address loaded dynamically -->
+                                    </div>
+                                </div>
+
+                                <!-- Payment Summary -->
+                                <div class="order-summary-section mt-4">
+                                    <h5>Payment Method</h5>
+                                    <div id="paymentSummary">
+                                        <!-- Payment method loaded dynamically -->
+                                    </div>
+                                </div>
+
+                                <!-- Terms -->
+                                <div class="form-check mt-4">
+                                    <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                    <label class="form-check-label" for="termsCheck">
+                                        I agree to the <a href="#" class="text-maroon">Terms & Conditions</a> and <a href="#" class="text-maroon">Privacy Policy</a>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="checkout-actions">
+                                <button type="button" class="btn btn-outline-dark btn-prev" data-prev="2">
+                                    <i class="bi bi-arrow-left me-2"></i>Back
+                                </button>
+                                <button type="submit" class="btn btn-maroon btn-place-order">
+                                    <i class="bi bi-lock me-2"></i>Place Order
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-lg-4">
+                    <div class="order-summary-card">
+                        <h4 class="summary-title">ORDER SUMMARY</h4>
+                        
+                        <div class="summary-items" id="summaryItems">
+                            <!-- Items loaded dynamically -->
+                        </div>
+
+                        <div class="summary-divider"></div>
+                        
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="checkoutSubtotal">$0.00</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span id="checkoutShipping">FREE</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>Tax (10%)</span>
+                            <span id="checkoutTax">$0.00</span>
+                        </div>
+
+                        <div class="summary-divider"></div>
+                        
+                        <div class="summary-row total">
+                            <span>TOTAL</span>
+                            <span id="checkoutTotal">$0.00</span>
+                        </div>
+
+                        <!-- Security Badges -->
+                        <div class="security-badges mt-4">
+                            <div class="security-item">
+                                <i class="bi bi-shield-lock"></i>
+                                <span>SSL Encrypted</span>
+                            </div>
+                            <div class="security-item">
+                                <i class="bi bi-lock"></i>
+                                <span>Secure Payment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Success Modal -->
+    <div class="modal fade" id="orderSuccessModal" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-body py-5">
+                    <div class="success-icon">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <h3 class="mt-4">Order Placed Successfully!</h3>
+                    <p class="text-muted">Thank you for your purchase. Your order has been confirmed.</p>
+                    <div class="order-number mt-3">
+                        Order Number: <strong id="orderNumber">#PL-000000</strong>
+                    </div>
+                    <p class="text-muted mt-3">A confirmation email has been sent to your email address.</p>
+                    <a href="index.html" class="btn btn-maroon mt-3">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <span class="brand-text">PRESTIGE</span>
+                        <span class="brand-sub">LEATHER</span>
+                    </div>
+                    <p class="footer-desc">Crafting premium leather biker suits since 1985. Our commitment to quality, protection, and style has made us the choice of champions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">SHOP</h5>
+                    <ul class="footer-links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=racing">Racing Suits</a></li>
+                        <li><a href="products.html?category=sport">Sport Suits</a></li>
+                        <li><a href="products.html?category=touring">Touring Suits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">COMPANY</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">SUPPORT</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="footer-title">CONTACT</h5>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-geo-alt"></i> 123 Racing Street, Milan, Italy</li>
+                        <li><i class="bi bi-telephone"></i> +39 02 1234 5678</li>
+                        <li><i class="bi bi-envelope"></i> info@prestigeleather.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Prestige Leather. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
+</task_progress>
+- [x] Create project structure and index.html (Home page)
+- [x] Create products.html (Product listing page)
+- [x] Create product-detail.html (Single product view)
+- [x] Create cart.html (Shopping cart page)
+- [x] Create checkout.html (Checkout page)
+- [ ] Create about.html (About us page)
+- [ ] Create contact.html (Contact page)
+- [ ] Create CSS styles (css/styles.css)
+- [ ] Create product data (js/data.js)
+- [ ] Create cart functionality (js/cart.js)
+- [ ] Create main JavaScript (js/main.js)
+- [ ] Create products.js for filtering
+- [ ] Create product-detail.js
+- [ ] Create checkout.js
+- [ ] Test all pages and functionality
+</task_progress>
+</write_to_file>

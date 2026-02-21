@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Prestige Leather</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">PRESTIGE</span>
+                <span class="brand-sub">LEATHER</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="products.html">All Products</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=racing">Racing Suits</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=sport">Sport Suits</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=touring">Touring Suits</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="#" class="nav-icon" data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon cart-icon">
+                        <i class="bi bi-bag"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">CONTACT US</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Contact</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Info -->
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h3>GET IN TOUCH</h3>
+                        <p class="text-muted mb-4">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Visit Us</h5>
+                                <p>123 Racing Street<br>Milan, Italy 20100</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Call Us</h5>
+                                <p>+39 02 1234 5678<br>Mon-Fri: 9AM - 6PM CET</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Email Us</h5>
+                                <p>info@prestigeleather.com<br>support@prestigeleather.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="bi bi-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Business Hours</h5>
+                                <p>Monday - Friday: 9AM - 6PM<br>Saturday: 10AM - 4PM</p>
+                            </div>
+                        </div>
+
+                        <div class="social-links mt-4">
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="contact-form-card">
+                        <h3>SEND US A MESSAGE</h3>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" name="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" name="lastName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" name="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" name="phone">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Subject *</label>
+                                    <select class="form-select" name="subject" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="order">Order Status</option>
+                                        <option value="product">Product Information</option>
+                                        <option value="returns">Returns & Exchanges</option>
+                                        <option value="custom">Custom Orders</option>
+                                        <option value="wholesale">Wholesale Inquiries</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Order Number (if applicable)</label>
+                                    <input type="text" class="form-control" name="orderNumber" placeholder="e.g., PL-123456">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Message *</label>
+                                    <textarea class="form-control" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletterCheck">
+                                        <label class="form-check-label" for="newsletterCheck">
+                                            Subscribe to our newsletter for updates and exclusive offers
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-maroon btn-lg">
+                                        <i class="bi bi-send me-2"></i>SEND MESSAGE
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container-fluid px-0">
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.0892456!2d9.185!3d45.4642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDI3JzUxLjEiTiA5wrAxMScwNi4wIkU!5e0!3m2!1sen!2sit!4v1234567890"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+                <p class="section-subtitle">Quick Answers to Common Questions</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How do I find my correct size?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We provide a detailed size guide on each product page. Measure your chest, waist, hips, and height, then compare to our sizing chart. If you're between sizes, we recommend sizing up for a more comfortable fit. For custom sizing, contact our customer service team.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What is your return policy?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer a 30-day return policy for unworn items in original packaging. Custom orders are non-returnable unless there's a manufacturing defect. Return shipping is free for exchanges. Refunds are processed within 5-7 business days of receiving the return.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Do you offer custom suits?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! We offer made-to-measure custom suits for riders who need a perfect fit. Custom orders take 4-6 weeks to complete and start at $2,500. Contact our custom department at custom@prestigeleather.com for a consultation.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    How long does shipping take?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Standard shipping (5-7 business days) is free worldwide. Express shipping (2-3 business days) is $29.99. Overnight shipping is available for $49.99. Custom orders have their own timeline communicated during the ordering process.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    How do I care for my leather suit?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Clean with a damp cloth after each use. Apply leather conditioner every 3-6 months. Store in a cool, dry place away from direct sunlight on a padded hanger. Never use heat to dry a wet suit - let it air dry naturally. See our Care Guide for detailed instructions.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h3>JOIN THE PRESTIGE CLUB</h3>
+                    <p>Subscribe for exclusive offers, new arrivals, and riding tips.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <button class="btn btn-newsletter" type="submit">SUBSCRIBE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <span class="brand-text">PRESTIGE</span>
+                        <span class="brand-sub">LEATHER</span>
+                    </div>
+                    <p class="footer-desc">Crafting premium leather biker suits since 1985. Our commitment to quality, protection, and style has made us the choice of champions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">SHOP</h5>
+                    <ul class="footer-links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=racing">Racing Suits</a></li>
+                        <li><a href="products.html?category=sport">Sport Suits</a></li>
+                        <li><a href="products.html?category=touring">Touring Suits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">COMPANY</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">SUPPORT</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="footer-title">CONTACT</h5>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-geo-alt"></i> 123 Racing Street, Milan, Italy</li>
+                        <li><i class="bi bi-telephone"></i> +39 02 1234 5678</li>
+                        <li><i class="bi bi-envelope"></i> info@prestigeleather.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Prestige Leather. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form class="search-form">
+                        <input type="text" class="form-control" placeholder="Search products..." id="searchInput">
+                        <button type="submit" class="btn btn-search"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Success Modal -->
+    <div class="modal fade" id="contactSuccessModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-body py-5">
+                    <div class="success-icon">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <h3 class="mt-4">Message Sent!</h3>
+                    <p class="text-muted">Thank you for contacting us. We'll get back to you within 24-48 hours.</p>
+                    <button type="button" class="btn btn-maroon mt-3" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Show success modal
+            var modal = new bootstrap.Modal(document.getElementById('contactSuccessModal'));
+            modal.show();
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+</task_progress>
+- [x] Create project structure and index.html (Home page)
+- [x] Create products.html (Product listing page)
+- [x] Create product-detail.html (Single product view)
+- [x] Create cart.html (Shopping cart page)
+- [x] Create checkout.html (Checkout page)
+- [x] Create about.html (About us page)
+- [x] Create contact.html (Contact page)
+- [ ] Create CSS styles (css/styles.css)
+- [ ] Create product data (js/data.js)
+- [ ] Create cart functionality (js/cart.js)
+- [ ] Create main JavaScript (js/main.js)
+- [ ] Create products.js for filtering
+- [ ] Create product-detail.js
+- [ ] Create checkout.js
+- [ ] Test all pages and functionality
+</task_progress>
+</write_to_file>

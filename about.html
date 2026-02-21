@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Prestige Leather</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">PRESTIGE</span>
+                <span class="brand-sub">LEATHER</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="products.html">All Products</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=racing">Racing Suits</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=sport">Sport Suits</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=touring">Touring Suits</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="#" class="nav-icon" data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon cart-icon">
+                        <i class="bi bi-bag"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header page-header-about">
+        <div class="container">
+            <h1 class="page-title">OUR STORY</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">About Us</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- About Intro -->
+    <section class="about-intro py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800" alt="Craftsmanship" class="img-fluid">
+                        <div class="experience-badge">
+                            <span class="number">40</span>
+                            <span class="text">Years of<br>Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <span class="section-label">SINCE 1985</span>
+                        <h2 class="about-title">Crafting Excellence, Stitch by Stitch</h2>
+                        <p class="about-text">Founded in the heart of Italy's leather district, Prestige Leather has been the pinnacle of motorcycle leather craftsmanship for over four decades. What began as a small family workshop has evolved into a globally recognized brand, trusted by professional racers and enthusiasts alike.</p>
+                        <p class="about-text">Our journey started with a simple belief: that riders deserve gear that offers uncompromising protection without sacrificing style. This philosophy drives every stitch, every cut, and every design decision we make.</p>
+                        <div class="about-signature mt-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Autograph_of_Benito_Mussolini.svg/320px-Autograph_of_Benito_Mussolini.svg.png" alt="Signature" class="signature-img" style="height: 40px; filter: invert(1);">
+                            <p class="mt-2 mb-0">Marco Prestigiacomo, Founder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">OUR VALUES</h2>
+                <p class="section-subtitle">What Drives Us Forward</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4>Protection First</h4>
+                        <p>Safety is non-negotiable. Every suit is engineered with CE-certified armor and impact-resistant materials.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="bi bi-gem"></i>
+                        </div>
+                        <h4>Quality Craftsmanship</h4>
+                        <p>Handcrafted by skilled artisans using time-honored techniques passed down through generations.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="bi bi-lightbulb"></i>
+                        </div>
+                        <h4>Innovation</h4>
+                        <p>Continuously pushing boundaries with new materials, designs, and technologies for better performance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="bi bi-heart"></i>
+                        </div>
+                        <h4>Passion</h4>
+                        <p>We ride what we make. Our team's passion for motorcycling fuels our dedication to excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Craftsmanship Section -->
+    <section class="craftsmanship-section py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="craftsmanship-images">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400" alt="Leather crafting" class="img-fluid">
+                            </div>
+                            <div class="col-6">
+                                <img src="https://images.unsplash.com/photo-1614975059251-992f11792571?w=400" alt="Stitching detail" class="img-fluid">
+                            </div>
+                            <div class="col-12">
+                                <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=800" alt="Finished product" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="craftsmanship-content">
+                        <span class="section-label">THE PROCESS</span>
+                        <h2 class="about-title">Artisan Craftsmanship</h2>
+                        <p class="about-text">Each Prestige Leather suit undergoes a meticulous 47-step production process, taking approximately 40 hours to complete. From selecting the finest full-grain leather to the final quality inspection, no detail is overlooked.</p>
+                        
+                        <div class="craftsmanship-steps mt-4">
+                            <div class="step-item">
+                                <div class="step-number">01</div>
+                                <div class="step-content">
+                                    <h5>Material Selection</h5>
+                                    <p>Only the top 5% of leather hides make the cut. We source from ethical tanneries in Italy and France.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">02</div>
+                                <div class="step-content">
+                                    <h5>Pattern Cutting</h5>
+                                    <p>Precision cutting ensures optimal grain direction and minimal waste while maximizing protection.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">03</div>
+                                <div class="step-content">
+                                    <h5>Assembly & Stitching</h5>
+                                    <p>Double and triple stitching in high-stress areas. Kevlar-reinforced seams for added durability.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">04</div>
+                                <div class="step-content">
+                                    <h5>Armor Integration</h5>
+                                    <p>CE-certified armor strategically placed at shoulders, elbows, knees, and hips.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-5">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="40">40+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="50000">50,000+</span>
+                        <span class="stat-label">Suits Crafted</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="120">120+</span>
+                        <span class="stat-label">Countries Served</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="500">500+</span>
+                        <span class="stat-label">Professional Riders</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">MEET THE TEAM</h2>
+                <p class="section-subtitle">The People Behind the Craft</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Team Member">
+                            <div class="team-social">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h5>Marco Prestigiacomo</h5>
+                            <span>Founder & CEO</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Team Member">
+                            <div class="team-social">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h5>Isabella Rossi</h5>
+                            <span>Head of Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member">
+                            <div class="team-social">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h5>Giuseppe Ferrara</h5>
+                            <span>Master Craftsman</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Team Member">
+                            <div class="team-social">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h5>Elena Bianchi</h5>
+                            <span>Quality Director</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">RACING PARTNERSHIPS</h2>
+                <p class="section-subtitle">Trusted by Professional Teams</p>
+            </div>
+            <div class="partners-logos">
+                <div class="row align-items-center justify-content-center g-4">
+                    <div class="col-6 col-md-2 text-center">
+                        <div class="partner-logo">
+                            <i class="bi bi-trophy" style="font-size: 2.5rem;"></i>
+                            <span>MotoGP Team</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2 text-center">
+                        <div class="partner-logo">
+                            <i class="bi bi-lightning" style="font-size: 2.5rem;"></i>
+                            <span>WSBK</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2 text-center">
+                        <div class="partner-logo">
+                            <i class="bi bi-speedometer2" style="font-size: 2.5rem;"></i>
+                            <span>SBK Racing</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2 text-center">
+                        <div class="partner-logo">
+                            <i class="bi bi-award" style="font-size: 2.5rem;"></i>
+                            <span>FIM EWC</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2 text-center">
+                        <div class="partner-logo">
+                            <i class="bi bi-flag" style="font-size: 2.5rem;"></i>
+                            <span>BSB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2>READY TO GEAR UP?</h2>
+            <p>Explore our collection of premium leather biker suits</p>
+            <a href="products.html" class="btn btn-hero">SHOP NOW</a>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h3>JOIN THE PRESTIGE CLUB</h3>
+                    <p>Subscribe for exclusive offers, new arrivals, and riding tips.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <button class="btn btn-newsletter" type="submit">SUBSCRIBE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <span class="brand-text">PRESTIGE</span>
+                        <span class="brand-sub">LEATHER</span>
+                    </div>
+                    <p class="footer-desc">Crafting premium leather biker suits since 1985. Our commitment to quality, protection, and style has made us the choice of champions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">SHOP</h5>
+                    <ul class="footer-links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=racing">Racing Suits</a></li>
+                        <li><a href="products.html?category=sport">Sport Suits</a></li>
+                        <li><a href="products.html?category=touring">Touring Suits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">COMPANY</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">SUPPORT</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="footer-title">CONTACT</h5>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-geo-alt"></i> 123 Racing Street, Milan, Italy</li>
+                        <li><i class="bi bi-telephone"></i> +39 02 1234 5678</li>
+                        <li><i class="bi bi-envelope"></i> info@prestigeleather.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Prestige Leather. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form class="search-form">
+                        <input type="text" class="form-control" placeholder="Search products..." id="searchInput">
+                        <button type="submit" class="btn btn-search"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+</task_progress>
+- [x] Create project structure and index.html (Home page)
+- [x] Create products.html (Product listing page)
+- [x] Create product-detail.html (Single product view)
+- [x] Create cart.html (Shopping cart page)
+- [x] Create checkout.html (Checkout page)
+- [x] Create about.html (About us page)
+- [ ] Create contact.html (Contact page)
+- [ ] Create CSS styles (css/styles.css)
+- [ ] Create product data (js/data.js)
+- [ ] Create cart functionality (js/cart.js)
+- [ ] Create main JavaScript (js/main.js)
+- [ ] Create products.js for filtering
+- [ ] Create product-detail.js
+- [ ] Create checkout.js
+- [ ] Test all pages and functionality
+</task_progress>
+</write_to_file>

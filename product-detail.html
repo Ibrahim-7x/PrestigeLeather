@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Prestige Leather</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">PRESTIGE</span>
+                <span class="brand-sub">LEATHER</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="products.html">All Products</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=racing">Racing Suits</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=sport">Sport Suits</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=touring">Touring Suits</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="#" class="nav-icon" data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon cart-icon">
+                        <i class="bi bi-bag"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb" id="productBreadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="products.html">Products</a></li>
+                    <li class="breadcrumb-item active" id="breadcrumbProduct">Product Name</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Product Images -->
+                <div class="col-lg-6">
+                    <div class="product-gallery">
+                        <div class="main-image-container">
+                            <img src="" alt="Product" class="main-image" id="mainProductImage">
+                            <div class="image-badges">
+                                <span class="badge-new d-none" id="badgeNew">NEW</span>
+                                <span class="badge-sale d-none" id="badgeSale">SALE</span>
+                            </div>
+                            <button class="zoom-btn" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                <i class="bi bi-zoom-in"></i>
+                            </button>
+                        </div>
+                        <div class="thumbnail-gallery" id="thumbnailGallery">
+                            <!-- Thumbnails will be loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="col-lg-6">
+                    <div class="product-info">
+                        <div class="product-category" id="productCategory">Category</div>
+                        <h1 class="product-title" id="productTitle">Product Name</h1>
+                        
+                        <div class="product-rating">
+                            <div class="stars" id="productStars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </div>
+                            <span class="rating-count">(<span id="reviewCount">0</span> Reviews)</span>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price" id="currentPrice">$0.00</span>
+                            <span class="original-price d-none" id="originalPrice">$0.00</span>
+                            <span class="discount-badge d-none" id="discountBadge">-0%</span>
+                        </div>
+
+                        <p class="product-description" id="productDescription">
+                            Product description will be loaded here.
+                        </p>
+
+                        <!-- Size Selection -->
+                        <div class="product-option">
+                            <label class="option-label">SIZE</label>
+                            <div class="size-selector" id="sizeSelector">
+                                <!-- Sizes will be loaded dynamically -->
+                            </div>
+                            <a href="#" class="size-guide-link" data-bs-toggle="modal" data-bs-target="#sizeGuideModal">
+                                <i class="bi bi-rulers"></i> Size Guide
+                            </a>
+                        </div>
+
+                        <!-- Color Selection -->
+                        <div class="product-option">
+                            <label class="option-label">COLOR</label>
+                            <div class="color-selector" id="colorSelector">
+                                <!-- Colors will be loaded dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Quantity -->
+                        <div class="product-option">
+                            <label class="option-label">QUANTITY</label>
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus" id="qtyMinus">-</button>
+                                <input type="number" class="qty-input" value="1" min="1" max="10" id="qtyInput">
+                                <button class="qty-btn plus" id="qtyPlus">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Add to Cart -->
+                        <div class="product-actions">
+                            <button class="btn btn-add-to-cart" id="addToCartBtn">
+                                <i class="bi bi-bag-plus"></i> ADD TO CART
+                            </button>
+                            <button class="btn btn-wishlist" id="wishlistBtn">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+
+                        <!-- Buy Now -->
+                        <button class="btn btn-buy-now w-100" id="buyNowBtn">
+                            BUY NOW
+                        </button>
+
+                        <!-- Product Features -->
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <i class="bi bi-shield-check"></i>
+                                <span>CE Certified Protection</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-truck"></i>
+                                <span>Free Worldwide Shipping</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-arrow-repeat"></i>
+                                <span>30-Day Easy Returns</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-award"></i>
+                                <span>2 Year Warranty</span>
+                            </div>
+                        </div>
+
+                        <!-- Share -->
+                        <div class="product-share">
+                            <span>Share:</span>
+                            <a href="#" class="share-link"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="share-link"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="share-link"><i class="bi bi-pinterest"></i></a>
+                            <a href="#" class="share-link"><i class="bi bi-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details Tabs -->
+            <div class="product-tabs mt-5">
+                <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button">Description</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="specifications-tab" data-bs-toggle="tab" data-bs-target="#specifications" type="button">Specifications</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button">Reviews</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="care-tab" data-bs-toggle="tab" data-bs-target="#care" type="button">Care Guide</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="productTabsContent">
+                    <div class="tab-pane fade show active" id="description" role="tabpanel">
+                        <div class="tab-content-inner" id="descriptionContent">
+                            <!-- Description content loaded dynamically -->
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="specifications" role="tabpanel">
+                        <div class="tab-content-inner" id="specificationsContent">
+                            <!-- Specifications loaded dynamically -->
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="reviews" role="tabpanel">
+                        <div class="tab-content-inner">
+                            <div class="reviews-summary">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4 text-center">
+                                        <div class="rating-big" id="avgRating">4.5</div>
+                                        <div class="stars">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                        </div>
+                                        <p>Based on <span id="totalReviews">0</span> reviews</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="rating-bars">
+                                            <div class="rating-bar-item">
+                                                <span>5 Star</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 60%"></div>
+                                                </div>
+                                                <span>60%</span>
+                                            </div>
+                                            <div class="rating-bar-item">
+                                                <span>4 Star</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 25%"></div>
+                                                </div>
+                                                <span>25%</span>
+                                            </div>
+                                            <div class="rating-bar-item">
+                                                <span>3 Star</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 10%"></div>
+                                                </div>
+                                                <span>10%</span>
+                                            </div>
+                                            <div class="rating-bar-item">
+                                                <span>2 Star</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 3%"></div>
+                                                </div>
+                                                <span>3%</span>
+                                            </div>
+                                            <div class="rating-bar-item">
+                                                <span>1 Star</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 2%"></div>
+                                                </div>
+                                                <span>2%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div id="reviewsList">
+                                <!-- Reviews loaded dynamically -->
+                            </div>
+                            <button class="btn btn-outline-maroon mt-4" id="loadMoreReviews">Load More Reviews</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="care" role="tabpanel">
+                        <div class="tab-content-inner">
+                            <h4>Leather Care Instructions</h4>
+                            <div class="care-guide">
+                                <div class="care-item">
+                                    <i class="bi bi-droplet"></i>
+                                    <h5>Cleaning</h5>
+                                    <p>Wipe down with a damp cloth after each use. Use a leather-specific cleaner for deeper cleaning. Avoid harsh chemicals or abrasive materials.</p>
+                                </div>
+                                <div class="care-item">
+                                    <i class="bi bi-moisture"></i>
+                                    <h5>Conditioning</h5>
+                                    <p>Apply leather conditioner every 3-6 months to maintain suppleness. This prevents cracking and extends the life of your suit.</p>
+                                </div>
+                                <div class="care-item">
+                                    <i class="bi bi-sun"></i>
+                                    <h5>Storage</h5>
+                                    <p>Store in a cool, dry place away from direct sunlight. Use a padded hanger to maintain shape. Avoid plastic bags - use a breathable garment bag.</p>
+                                </div>
+                                <div class="care-item">
+                                    <i class="bi bi-water"></i>
+                                    <h5>Water Exposure</h5>
+                                    <p>If the suit gets wet, let it air dry naturally at room temperature. Never use heat sources like radiators or hair dryers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products-section py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">YOU MAY ALSO LIKE</h2>
+                <p class="section-subtitle">Similar Products</p>
+            </div>
+            <div class="row g-4" id="relatedProducts">
+                <!-- Related products loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h3>JOIN THE PRESTIGE CLUB</h3>
+                    <p>Subscribe for exclusive offers, new arrivals, and riding tips.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <button class="btn btn-newsletter" type="submit">SUBSCRIBE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <span class="brand-text">PRESTIGE</span>
+                        <span class="brand-sub">LEATHER</span>
+                    </div>
+                    <p class="footer-desc">Crafting premium leather biker suits since 1985. Our commitment to quality, protection, and style has made us the choice of champions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">SHOP</h5>
+                    <ul class="footer-links">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=racing">Racing Suits</a></li>
+                        <li><a href="products.html?category=sport">Sport Suits</a></li>
+                        <li><a href="products.html?category=touring">Touring Suits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">COMPANY</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">SUPPORT</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="footer-title">CONTACT</h5>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-geo-alt"></i> 123 Racing Street, Milan, Italy</li>
+                        <li><i class="bi bi-telephone"></i> +39 02 1234 5678</li>
+                        <li><i class="bi bi-envelope"></i> info@prestigeleather.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Prestige Leather. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Zoom Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img src="" alt="Product" class="img-fluid" id="zoomImage">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Size Guide Modal -->
+    <div class="modal fade" id="sizeGuideModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">SIZE GUIDE</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-4">Use this guide to find your perfect fit. All measurements are in centimeters.</p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered size-guide-table">
+                            <thead>
+                                <tr>
+                                    <th>Size</th>
+                                    <th>Chest</th>
+                                    <th>Waist</th>
+                                    <th>Hip</th>
+                                    <th>Height</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>S</td>
+                                    <td>88-92</td>
+                                    <td>74-78</td>
+                                    <td>88-92</td>
+                                    <td>168-174</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>94-98</td>
+                                    <td>80-84</td>
+                                    <td>94-98</td>
+                                    <td>174-180</td>
+                                </tr>
+                                <tr>
+                                    <td>L</td>
+                                    <td>100-104</td>
+                                    <td>86-90</td>
+                                    <td>100-104</td>
+                                    <td>180-186</td>
+                                </tr>
+                                <tr>
+                                    <td>XL</td>
+                                    <td>106-110</td>
+                                    <td>92-96</td>
+                                    <td>106-110</td>
+                                    <td>186-192</td>
+                                </tr>
+                                <tr>
+                                    <td>XXL</td>
+                                    <td>112-116</td>
+                                    <td>98-102</td>
+                                    <td>112-116</td>
+                                    <td>192-198</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4">
+                        <h6>How to Measure</h6>
+                        <ul>
+                            <li><strong>Chest:</strong> Measure around the fullest part of your chest</li>
+                            <li><strong>Waist:</strong> Measure around your natural waistline</li>
+                            <li><strong>Hip:</strong> Measure around the fullest part of your hips</li>
+                            <li><strong>Height:</strong> Your total height without shoes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form class="search-form">
+                        <input type="text" class="form-control" placeholder="Search products..." id="searchInput">
+                        <button type="submit" class="btn btn-search"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/product-detail.js"></script>
+</body>
+</html>
+</task_progress>
+- [x] Create project structure and index.html (Home page)
+- [x] Create products.html (Product listing page)
+- [x] Create product-detail.html (Single product view)
+- [ ] Create cart.html (Shopping cart page)
+- [ ] Create checkout.html (Checkout page)
+- [ ] Create about.html (About us page)
+- [ ] Create contact.html (Contact page)
+- [ ] Create CSS styles (css/styles.css)
+- [ ] Create product data (js/data.js)
+- [ ] Create cart functionality (js/cart.js)
+- [ ] Create main JavaScript (js/main.js)
+- [ ] Create products.js for filtering
+- [ ] Create product-detail.js
+- [ ] Test all pages and functionality
+</task_progress>
+</write_to_file>
